@@ -16,7 +16,7 @@ export default function Home() {
   }
   return (
     <View style={Styles.container}>
-      <Image source={backgroundImg} style={Styles.image} />
+      {/* <Image source={backgroundImg} style={Styles.image} /> */}
     </View>
   );
 }

@@ -2,6 +2,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
+import Icon from "react-native-vector-icons/Feather";
+import { StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar';
 import Landing from './src/pages/landing';
 import Home from './src/pages/home';
@@ -11,9 +13,34 @@ const Tab = createBottomTabNavigator();
 
 function HomeNavigation() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Início" component={Home} />
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          let iconName;
+
+          if (route.name === 'Inicio') {
+            iconName = 'home'
+          } else if (route.name === 'Buscar') {
+            iconName = 'search'
+          } else if (route.name === 'Salvos') {
+            iconName = 'star'
+          } else if (route.name === 'Imagens') {
+            iconName = 'image'
+          }
+
+          // You can return any component that you like here!
+          return <Icon name={iconName} size={size} color={color} />;
+        },
+      })}
+      tabBarOptions={{
+        activeTintColor: 'white',
+        inactiveTintColor: 'gray',
+        style: styles.tabbar
+      }}>
+      <Tab.Screen name="Inicio" component={Home} />
       <Tab.Screen name="Buscar" component={Home} />
+      <Tab.Screen name="Salvos" component={Home} />
+      <Tab.Screen name="Imagens" component={Home} />
     </Tab.Navigator>
   )
 }
@@ -33,3 +60,13 @@ export default function App() {
 
   );
 }
+
+
+const styles = StyleSheet.create({
+  tabbar: {
+    backgroundColor: '#151515',
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+    height: 65,
+  },
+})
