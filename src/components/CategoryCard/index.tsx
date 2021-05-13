@@ -1,8 +1,9 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
+import { Image, Text } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { LinearGradient } from 'expo-linear-gradient';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 import { styles as Styles } from './styles'
@@ -59,9 +60,11 @@ export default function CategoryCard(props: CategoryCardProps) {
     }
   }
   return (
-    <LinearGradient colors={color()} style={Styles.container}>
-      <Image source={icon()} />
-      <Text style={Styles.title}>{text()}</Text>
-    </LinearGradient>
+    <TouchableOpacity activeOpacity={0.8}>
+      <LinearGradient colors={color()} style={Styles.container}>
+        <Image source={icon()} />
+        <Text style={Styles.title}>{text()}</Text>
+      </LinearGradient>
+    </TouchableOpacity>
   );
 }

@@ -16,7 +16,9 @@ export const styles = StyleSheet.create({
   input: {
     flex: 1,
     marginRight: 10,
+    paddingVertical: 12,
     color: '#fff',
-    paddingVertical: 12
+    fontFamily: 'Roboto_400Regular',
+    fontSize: 14,
   },
 })
