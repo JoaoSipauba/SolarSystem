@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
   appbar: {
     position: 'relative',
     width: '100%',
+    marginBottom: '15%'
   },
   appbarTitle: {
     display: 'flex',

@@ -7,6 +7,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import CategoryCard from '../../components/CategoryCard';
 import PlanetCard from '../../components/PlanetCard';
 
+import Search from '../../components/Search';
 import backgroundImg from '../../../assets/home-bg.svg';
 import { styles as Styles } from './styles'
 
@@ -29,6 +30,7 @@ export default function Home() {
         <Text style={Styles.appbarText}>O que você vai aprender hoje?</Text>
         <Icon style={Styles.appbarIcon} name="settings" color="#fff" size={25} />
       </View>
+      <Search />
       <View style={Styles.categorias}>
         <Text style={Styles.categoriasTitle}>Categorias</Text>
         <View style={Styles.categoriasCardsContainer}>
