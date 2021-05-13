@@ -45,5 +45,21 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     right: 0,
-  }
+  },
+  categorias: {
+    width: '100%',
+    marginTop: '10%',
+  },
+  categoriasTitle: {
+    color: '#fff',
+    fontFamily: 'Roboto_400Regular',
+    fontSize: 16,
+  },
+  categoriasCardsContainer: {
+    width: '100%',
+    marginTop: '5%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
 });

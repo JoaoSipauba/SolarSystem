@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Feather';
 
 import backgroundImg from '../../../assets/home-bg.svg';
 import { styles as Styles } from './styles'
+import CategoryCard from '../../components/CategoryCard';
 
 export default function Home() {
   let [fontsLoaded] = useFonts({
@@ -25,6 +26,15 @@ export default function Home() {
         </View>
         <Text style={Styles.appbarText}>O que você vai aprender hoje?</Text>
         <Icon style={Styles.appbarIcon} name="settings" color="#fff" size={25} />
+      </View>
+      <View style={Styles.categorias}>
+        <Text style={Styles.categoriasTitle}>Categorias</Text>
+        <View style={Styles.categoriasCardsContainer}>
+          <CategoryCard type='planet' />
+          <CategoryCard type='asteroid' />
+          <CategoryCard type='star' />
+          <CategoryCard type='galaxy' />
+        </View>
       </View>
     </View>
   );
