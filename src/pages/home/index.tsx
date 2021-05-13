@@ -3,10 +3,12 @@ import { Image, Text, View } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import Icon from 'react-native-vector-icons/Feather';
+import { ScrollView } from 'react-native-gesture-handler';
+import CategoryCard from '../../components/CategoryCard';
+import PlanetCard from '../../components/PlanetCard';
 
 import backgroundImg from '../../../assets/home-bg.svg';
 import { styles as Styles } from './styles'
-import CategoryCard from '../../components/CategoryCard';
 
 export default function Home() {
   let [fontsLoaded] = useFonts({
@@ -35,6 +37,21 @@ export default function Home() {
           <CategoryCard type='star' />
           <CategoryCard type='galaxy' />
         </View>
+      </View>
+      <View style={Styles.planetas}>
+        <Text style={Styles.categoriasTitle}>Planetas</Text>
+        <ScrollView horizontal style={Styles.planetasCardsContainer}>
+          <PlanetCard type='sun' />
+          <PlanetCard type='mercury' />
+          <PlanetCard type='venus' />
+          <PlanetCard type='earth' />
+          <PlanetCard type='mars' />
+          <PlanetCard type='jupiter' />
+          <PlanetCard type='saturn' />
+          <PlanetCard type='uranus' />
+          <PlanetCard type='neptune' />
+          <PlanetCard type='pluto' />
+        </ScrollView>
       </View>
     </View>
   );

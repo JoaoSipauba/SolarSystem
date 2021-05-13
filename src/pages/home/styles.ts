@@ -62,4 +62,17 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  planetas: {
+    width: '100%',
+    marginTop: '10%',
+  },
+  planetasTitle: {
+    color: '#fff',
+    fontFamily: 'Roboto_400Regular',
+    fontSize: 16,
+  },
+  planetasCardsContainer: {
+    width: '100%',
+    marginTop: '5%',
+  },
 });
