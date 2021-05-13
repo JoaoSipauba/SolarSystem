@@ -30,7 +30,7 @@ export default function Home() {
         <Text style={Styles.appbarText}>O que você vai aprender hoje?</Text>
         <Icon style={Styles.appbarIcon} name="settings" color="#fff" size={25} />
       </View>
-      <Search />
+      <Search placeholder="Procure planetas, asteroides, estrelas..." />
       <View style={Styles.categorias}>
         <Text style={Styles.categoriasTitle}>Categorias</Text>
         <View style={Styles.categoriasCardsContainer}>
