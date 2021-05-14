@@ -8,7 +8,7 @@ import CategoryCard from '../../components/CategoryCard';
 import PlanetCard from '../../components/PlanetCard';
 
 import Search from '../../components/Search';
-import backgroundImg from '../../../assets/home-bg.svg';
+import backgroundImg from '../../../assets/Stars.png';
 import { styles as Styles } from './styles'
 
 export default function Home() {

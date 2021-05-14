@@ -16,7 +16,9 @@ export const styles = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
-    position: 'absolute'
+    position: 'absolute',
+    top: '5%',
+    opacity: 0.65
   },
   appbar: {
     position: 'relative',
