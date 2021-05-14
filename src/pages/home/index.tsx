@@ -28,7 +28,7 @@ export default function Home() {
           <Text style={Styles.appbarTitleBold}>João Sipauba</Text>
         </View>
         <Text style={Styles.appbarText}>O que você vai aprender hoje?</Text>
-        <Icon style={Styles.appbarIcon} name="settings" color="#fff" size={25} />
+        <Icon style={Styles.appbarIcon} name="settings" color="#fff" size={20} />
       </View>
       <Search placeholder="Procure planetas, asteroides, estrelas..." />
       <View style={Styles.categorias}>

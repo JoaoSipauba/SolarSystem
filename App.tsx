@@ -7,6 +7,7 @@ import { StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar';
 import Landing from './src/pages/landing';
 import Home from './src/pages/home';
+import Search from './src/pages/search';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -16,7 +17,7 @@ function HomeNavigation() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
-          let iconName;
+          let iconName = '';
 
           if (route.name === 'Inicio') {
             iconName = 'home'
@@ -38,7 +39,7 @@ function HomeNavigation() {
         style: styles.tabbar
       }}>
       <Tab.Screen name="Inicio" component={Home} />
-      <Tab.Screen name="Buscar" component={Home} />
+      <Tab.Screen name="Buscar" component={Search} />
       <Tab.Screen name="Salvos" component={Home} />
       <Tab.Screen name="Imagens" component={Home} />
     </Tab.Navigator>
@@ -69,7 +70,8 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 16,
     borderTopWidth: 0,
     position: 'absolute',
-    paddingVertical: 3,
-    // height: 65,
+    paddingTop: 10,
+    paddingBottom: 10,
+    height: 65,
   },
 })
