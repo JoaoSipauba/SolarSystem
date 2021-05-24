@@ -7,6 +7,8 @@ import Icon from 'react-native-vector-icons/Feather';
 import SearchComponent from '../../components/Search';
 import backgroundImg from '../../../assets/Stars.png';
 import { styles as Styles } from './styles'
+import { ScrollView } from 'react-native-gesture-handler';
+import ResultCard from '../../components/ResultCard';
 
 export default function Search() {
   let [fontsLoaded] = useFonts({
@@ -25,6 +27,10 @@ export default function Search() {
       </View>
       <Text style={Styles.pageText}>Resultados da busca</Text>
       <SearchComponent placeholder="Procure planetas, asteroides, estrelas..." />
+
+      <ScrollView style={Styles.resultsContainer}>
+        <ResultCard />
+      </ScrollView>
     </View>
   );
 }

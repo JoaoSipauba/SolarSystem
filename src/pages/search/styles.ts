@@ -33,4 +33,8 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     marginBottom: '15%',
   },
+  resultsContainer: {
+    width: '100%',
+    marginTop: '10%'
+  },
 });
